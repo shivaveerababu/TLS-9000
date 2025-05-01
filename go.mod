@@ -1,4 +1,4 @@
-module github.com/bogdanfinn/tls-client
+module github.com/shivaveerababu/TLS-9000
 
 go 1.22.0
 
