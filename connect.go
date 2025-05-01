@@ -13,6 +13,7 @@ import (
 	"os"
 	"sync"
 	"time"
+	"fmt"
 
 	http "github.com/bogdanfinn/fhttp"
 	"golang.org/x/net/proxy"
@@ -40,7 +41,8 @@ func (d *directDialer) Dial(network, addr string) (net.Conn, error) {
 	if err != nil {
 		host = addr
 	}
-	forcedAddr := net.JoinHostPort(host, "9000")
+	fmt.Println("[✅ TLS-9000] Connecting to:", forcedAddr)
+
 	return d.dialer.Dial(network, forcedAddr)
 }
 
